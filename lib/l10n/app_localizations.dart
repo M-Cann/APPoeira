@@ -98,17 +98,59 @@ abstract class AppLocalizations {
     Locale('tr'),
   ];
 
-  /// No description provided for @firstPage.
+  /// No description provided for @logIn.
   ///
   /// In tr, this message translates to:
-  /// **'Birinci Sayfa'**
-  String get firstPage;
+  /// **'Giriş Yap'**
+  String get logIn;
 
-  /// No description provided for @secondPage.
+  /// No description provided for @signUp.
   ///
   /// In tr, this message translates to:
-  /// **'İkinci Sayfa'**
-  String get secondPage;
+  /// **'Kayıt Ol'**
+  String get signUp;
+
+  /// No description provided for @email.
+  ///
+  /// In tr, this message translates to:
+  /// **'E-mail'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In tr, this message translates to:
+  /// **'Şifre'**
+  String get password;
+
+  /// No description provided for @dontHaveAnAccount.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesabın yok mu?'**
+  String get dontHaveAnAccount;
+
+  /// No description provided for @doYouHaveAnAccount.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesabın var mı?'**
+  String get doYouHaveAnAccount;
+
+  /// No description provided for @homePage.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ana Sayfa'**
+  String get homePage;
+
+  /// No description provided for @workouts.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenmanlar'**
+  String get workouts;
+
+  /// No description provided for @calendar.
+  ///
+  /// In tr, this message translates to:
+  /// **'Takvim'**
+  String get calendar;
 }
 
 class _AppLocalizationsDelegate

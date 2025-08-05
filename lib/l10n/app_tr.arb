@@ -1,4 +1,11 @@
 {
-    "firstPage": "Birinci Sayfa",
-    "secondPage": "İkinci Sayfa"
+    "logIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
+    "email": "E-mail",
+    "password": "Şifre",
+    "dontHaveAnAccount": "Hesabın yok mu?",
+    "doYouHaveAnAccount": "Hesabın var mı?",
+    "homePage": "Ana Sayfa",
+    "workouts": "Antrenmanlar",
+    "calendar": "Takvim"
 }

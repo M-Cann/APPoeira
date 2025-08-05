@@ -9,8 +9,29 @@ class AppLocalizationsTr extends AppLocalizations {
   AppLocalizationsTr([String locale = 'tr']) : super(locale);
 
   @override
-  String get firstPage => 'Birinci Sayfa';
+  String get logIn => 'Giriş Yap';
 
   @override
-  String get secondPage => 'İkinci Sayfa';
+  String get signUp => 'Kayıt Ol';
+
+  @override
+  String get email => 'E-mail';
+
+  @override
+  String get password => 'Şifre';
+
+  @override
+  String get dontHaveAnAccount => 'Hesabın yok mu?';
+
+  @override
+  String get doYouHaveAnAccount => 'Hesabın var mı?';
+
+  @override
+  String get homePage => 'Ana Sayfa';
+
+  @override
+  String get workouts => 'Antrenmanlar';
+
+  @override
+  String get calendar => 'Takvim';
 }

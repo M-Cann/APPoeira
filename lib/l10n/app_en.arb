@@ -1,4 +1,11 @@
 {
-    "firstPage": "First Page",
-    "secondPage": "Second Page"
+    "logIn": "Log In",
+    "signUp": "Sign Up",
+    "email": "E-mail",
+    "password": "Password",
+    "dontHaveAnAccount": "Don't have an account?",
+    "doYouHaveAnAccount": "Do you have an account?",
+    "homePage": "Home Page",
+    "workouts": "Workouts",
+    "calendar": "Calendar"
 }

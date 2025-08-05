@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "66371034112",
+    "project_id": "appoeira",
+    "storage_bucket": "appoeira.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66371034112:android:a6f30cabecffa9d8fecce5",
+        "android_client_info": {
+          "package_name": "com.appoeira.appoeira"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADDBchGxd7qDZsFmzxTG4bk38i-955f_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
