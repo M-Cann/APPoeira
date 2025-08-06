@@ -40,7 +40,6 @@ class _HomePageState extends State<HomePage> {
       Navigator.push(context, MaterialPageRoute(builder: (context) => LogIn()),);
     } on FirebaseAuthException catch(e) {
       Logger.red.log('Çıkış Başarısız ${e.message}');
-      print('Test');
     }
   }
 
