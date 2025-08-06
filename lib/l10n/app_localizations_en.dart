@@ -34,4 +34,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get calendar => 'Calendar';
+
+  @override
+  String get achievements => 'Achievements';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get signOut => 'Sign Out';
 }

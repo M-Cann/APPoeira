@@ -1,8 +1,10 @@
 import 'package:appoeira/common_functions/developer_tools.dart';
 import 'package:appoeira/l10n/app_localizations.dart';
 import 'package:appoeira/pages/authentication/screens/sign_up.dart';
+import 'package:appoeira/pages/authentication/services/authentication_services.dart';
 import 'package:appoeira/pages/home_page/screens/home.dart';
 import 'package:appoeira/providers/providers.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -28,17 +30,21 @@ class _LogInState extends State<LogIn> {
       languageDropdownList.add(DropdownMenuEntry(value: i, label: AppLocalizations.supportedLocales[i].languageCode));
     }
     WidgetsBinding.instance.addPostFrameCallback((_) {
-        if (mounted){
-          currentLanguageIndex = AppLocalizations.supportedLocales.indexWhere((element) => element.languageCode == AppLocalizations.of(context)!.localeName);
-        }
-      },
-    );
+      if (mounted){
+        currentLanguageIndex = AppLocalizations.supportedLocales.indexWhere((element) => element.languageCode == AppLocalizations.of(context)!.localeName);
+      }
+    },);
     super.initState();
   }
 
-  void logIn(){
-    Logger.green.log('Giriş Tamam');
-    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()),);
+  Future<void> logIn() async {
+    try{
+      await Authentication().logIn(emailController.text, passwordController.text);
+      Logger.green.log('Giriş Tamam');
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
+    } on FirebaseAuthException catch(e) {
+      Logger.red.log('Giriş Başarısız ${e.message}');
+    }
   }
 
   @override

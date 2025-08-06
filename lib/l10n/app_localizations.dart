@@ -151,6 +151,24 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Takvim'**
   String get calendar;
+
+  /// No description provided for @achievements.
+  ///
+  /// In tr, this message translates to:
+  /// **'Başarımlar'**
+  String get achievements;
+
+  /// No description provided for @profile.
+  ///
+  /// In tr, this message translates to:
+  /// **'Profil'**
+  String get profile;
+
+  /// No description provided for @signOut.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çıkış Yap'**
+  String get signOut;
 }
 
 class _AppLocalizationsDelegate

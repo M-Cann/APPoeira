@@ -1,6 +1,12 @@
+import 'package:appoeira/common_functions/developer_tools.dart';
 import 'package:appoeira/l10n/app_localizations.dart';
+import 'package:appoeira/pages/achievements/screens/achievements_list.dart';
+import 'package:appoeira/pages/authentication/screens/log_in.dart';
+import 'package:appoeira/pages/authentication/services/authentication_services.dart';
 import 'package:appoeira/pages/calendar/screens/calendar.dart';
+import 'package:appoeira/pages/profile/screens/profile.dart';
 import 'package:appoeira/pages/workouts/screens/workouts_list.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,9 +26,21 @@ class _HomePageState extends State<HomePage> {
       setState(() {
         drawerList.add(DrawerMenu(AppLocalizations.of(context)!.workouts, WorkoutsList()));
         drawerList.add(DrawerMenu(AppLocalizations.of(context)!.calendar, Calendar()));
+        drawerList.add(DrawerMenu(AppLocalizations.of(context)!.achievements, AchievementsList()));
+        drawerList.add(DrawerMenu(AppLocalizations.of(context)!.profile, Profile()));
       });
     },);
     super.initState();
+  }
+
+  Future<void> signOut() async {
+    try{
+      await Authentication().signOut();
+      Logger.green.log('Çıkış Yapıldı');
+      Navigator.push(context, MaterialPageRoute(builder: (context) => LogIn()),);
+    } on FirebaseAuthException catch(e) {
+      Logger.red.log('Çıkış Başarısız ${e.message}');
+    }
   }
 
   @override
@@ -40,25 +58,46 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       drawer: Drawer(
-        child: ListView.separated(
-          padding: EdgeInsets.symmetric(vertical: 24.h),
-          itemBuilder: (context, index) {
-            return GestureDetector(
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => drawerList[index].route),),
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
-                child: Text(drawerList[index].title),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.symmetric(vertical: 24.h),
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => drawerList[index].route),),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                    child: Text(drawerList[index].title),
+                  ),
+                );
+              },
+              separatorBuilder: (context, index) {
+                return Divider(
+                  height: 1.h,
+                  thickness: 1.h,
+                  color: Colors.grey,
+                );
+              },
+              itemCount: drawerList.length,
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: 24.h),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  overlayColor: Colors.transparent,
+                ),
+                onPressed: () {
+                  signOut();
+                },
+                child: Text(AppLocalizations.of(context)!.signOut,
+                  style: TextStyle(color: Colors.red),
+                ),
               ),
-            );
-          },
-          separatorBuilder: (context, index) {
-            return Divider(
-              height: 1.h,
-              thickness: 1.h,
-              color: Colors.grey,
-            );
-          },
-          itemCount: drawerList.length,
+            ),
+          ],
         ),
       ),
     );

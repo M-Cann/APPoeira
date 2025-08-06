@@ -34,4 +34,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get calendar => 'Takvim';
+
+  @override
+  String get achievements => 'Başarımlar';
+
+  @override
+  String get profile => 'Profil';
+
+  @override
+  String get signOut => 'Çıkış Yap';
 }

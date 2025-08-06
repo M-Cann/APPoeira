@@ -4,14 +4,14 @@ class Authentication{
   FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 
   Future<void> signUp(String email, String password) async {
-    firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
+    await firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
   }
 
   Future<void> logIn(String email, String password) async {
-    firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+    await firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
   }
 
-  Future<void> logOut() async {
-    firebaseAuth.signOut();
+  Future<void> signOut() async {
+    await firebaseAuth.signOut();
   }
 }

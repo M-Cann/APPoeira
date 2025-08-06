@@ -1,7 +1,9 @@
 import 'package:appoeira/common_functions/developer_tools.dart';
 import 'package:appoeira/l10n/app_localizations.dart';
 import 'package:appoeira/pages/authentication/screens/log_in.dart';
+import 'package:appoeira/pages/authentication/services/authentication_services.dart';
 import 'package:appoeira/pages/home_page/screens/home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,9 +20,14 @@ class _SignUpState extends State<SignUp> {
 
   bool buttonActive() => emailController.text.isNotEmpty && passwordController.text.isNotEmpty;
 
-  void signUp(){
-    Logger.green.log('Kayıt Tamam');
-    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
+  Future<void> signUp() async {
+    try{
+      await Authentication().signUp(emailController.text, passwordController.text);
+      Logger.green.log('Kayıt Tamam');
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
+    } on FirebaseAuthException catch(e) {
+      Logger.red.log('Kayıt Başarısız ${e.message}');
+    }
   }
 
   @override

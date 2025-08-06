@@ -5,28 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b768617-00d4-4e81-b6e7-ef277b21c495" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/common_functions/developer_tools.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/authentication/screens/log_in.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/authentication/screens/sign_up.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/authentication/services/authentication_services.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/calendar/screens/calendar.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/home_page/screens/home.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/workouts/screens/workouts_list.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/providers/providers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/achievements/screens/achievements_list.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/profile/screens/profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APPoeira.iml" beforeDir="false" afterPath="$PROJECT_DIR$/APPoeira.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_en.arb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_tr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_tr.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_tr.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_tr.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/authentication/screens/log_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/authentication/screens/log_in.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/authentication/screens/sign_up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/authentication/screens/sign_up.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/authentication/services/authentication_services.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/authentication/services/authentication_services.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/home_page/screens/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page/screens/home.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +50,7 @@
     "git-widget-placeholder": "main",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mehme/Documents/espada/APPoeira/lib/pages/workouts",
+    "last_opened_file_path": "C:/Users/mehme/Documents/espada/APPoeira/lib/pages",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2735632",
@@ -69,9 +60,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mehme\Documents\espada\APPoeira\lib\pages" />
       <recent name="C:\Users\mehme\Documents\espada\APPoeira\lib\pages\workouts" />
       <recent name="C:\Users\mehme\Documents\espada\APPoeira\lib\pages\calendar" />
-      <recent name="C:\Users\mehme\Documents\espada\APPoeira\lib\pages" />
       <recent name="C:\Users\mehme\Documents\espada\APPoeira\lib\pages\home_page\screens" />
       <recent name="C:\Users\mehme\Documents\espada\APPoeira\lib\pages\home_page" />
     </key>
