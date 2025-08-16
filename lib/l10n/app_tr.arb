@@ -7,8 +7,41 @@
     "doYouHaveAnAccount": "Hesabın var mı?",
     "homePage": "Ana Sayfa",
     "workouts": "Antrenmanlar",
+    "workout": "Antrenman",
     "calendar": "Takvim",
     "achievements": "Başarımlar",
     "profile": "Profil",
-    "signOut": "Çıkış Yap"
+    "signOut": "Çıkış Yap",
+    "settings": "Ayarlar",
+    "workoutSettings": "Antrenman Ayarları",
+    "countdownTime": "Geri Sayım Süresi",
+    "setsTheTimeYouAreGivenToPrepareWhenStartingAWorkout": "Antrenmana başlarken hazırlanmanız için verilen süreyi ayarlar.",
+    "themeSettings": "Tema Ayarları",
+    "startWorkout": "Antrenmana Başla",
+    "addWorkout": "Antrenman Ekle",
+    "addWorkoutProgram": "Antrenman Programı Ekle",
+    "workoutProgram": "Antrenman Programı",
+    "youVeNeverTrainedBeforeClickAboveToStartTrainingNow": "Hiç antrenman yapmamışsın.\nHemen yukarıya tıklayarak antrenmana başla.",
+    "start": "Başlat",
+    "noMovementInformationFound": "Hareket bilgisi bulunamadı.",
+    "run": "Koşu",
+    "walk": "Yürüyüş",
+    "calisthenics": "Calisthenics",
+    "cardio": "Kardiyo",
+    "swim": "Yüzme",
+    "stretch": "Esneme",
+    "yoga": "Yoga",
+    "capoeira": "Capoeira",
+    "other": "Diğer",
+    "setsOfReps": "{set} set {rep} tekrar",
+    "@setsOfReps": {
+      "placeholders": {
+        "set": {
+          "type": "int"
+        },
+        "rep": {
+          "type": "int"
+        }
+      }
+    }
 }

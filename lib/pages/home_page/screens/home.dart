@@ -5,7 +5,9 @@ import 'package:appoeira/pages/authentication/screens/log_in.dart';
 import 'package:appoeira/pages/authentication/services/authentication_services.dart';
 import 'package:appoeira/pages/calendar/screens/calendar.dart';
 import 'package:appoeira/pages/profile/screens/profile.dart';
+import 'package:appoeira/pages/settings/screens/settings.dart';
 import 'package:appoeira/pages/workouts/screens/workouts_list.dart';
+import 'package:appoeira/theme/theme.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,6 +30,7 @@ class _HomePageState extends State<HomePage> {
         drawerList.add(DrawerMenu(AppLocalizations.of(context)!.calendar, Calendar()));
         drawerList.add(DrawerMenu(AppLocalizations.of(context)!.achievements, AchievementsList()));
         drawerList.add(DrawerMenu(AppLocalizations.of(context)!.profile, Profile()));
+        drawerList.add(DrawerMenu(AppLocalizations.of(context)!.settings, Settings()));
       });
     },);
     super.initState();
@@ -46,6 +49,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: colorBackground,
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(AppLocalizations.of(context)!.homePage),

@@ -7,8 +7,41 @@
     "doYouHaveAnAccount": "Do you have an account?",
     "homePage": "Home Page",
     "workouts": "Workouts",
+    "workout": "Workout",
     "calendar": "Calendar",
     "achievements": "Achievements",
     "profile": "Profile",
-    "signOut": "Sign Out"
+    "signOut": "Sign Out",
+    "settings": "Settings",
+    "workoutSettings": "Workout Settings",
+    "countdownTime": "Countdown Time",
+    "setsTheTimeYouAreGivenToPrepareWhenStartingAWorkout": "Sets the time you are given to prepare when starting a workout.",
+    "themeSettings": "Theme Settings",
+    "startWorkout": "Start Workout",
+    "addWorkout": "Add Workout",
+    "addWorkoutProgram": "Add Workout Program",
+    "workoutProgram": "Workout Program",
+    "youVeNeverTrainedBeforeClickAboveToStartTrainingNow": "You've never trained before.\nClick above to start training now.",
+    "start": "Start",
+    "noMovementInformationFound": "No movement information found.",
+    "run": "Run",
+    "walk": "Walk",
+    "calisthenics": "Calisthenics",
+    "cardio": "Cardio",
+    "swim": "Swim",
+    "stretch": "Stretch",
+    "yoga": "Yoga",
+    "capoeira": "Capoeira",
+    "other": "Other",
+    "setsOfReps": "{set} sets of {rep} reps",
+    "@setsOfReps": {
+      "placeholders": {
+        "set": {
+          "type": "int"
+        },
+        "rep": {
+          "type": "int"
+        }
+      }
+    }
 }

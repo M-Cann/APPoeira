@@ -4,10 +4,11 @@ import 'package:appoeira/pages/authentication/screens/sign_up.dart';
 import 'package:appoeira/pages/authentication/services/authentication_services.dart';
 import 'package:appoeira/pages/home_page/screens/home.dart';
 import 'package:appoeira/providers/providers.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:appoeira/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -21,6 +22,7 @@ class _LogInState extends State<LogIn> {
   TextEditingController passwordController = TextEditingController();
   List<DropdownMenuEntry> languageDropdownList = [];
   int currentLanguageIndex = 0;
+  dynamic prefs;
 
   bool buttonActive() => emailController.text.isNotEmpty && passwordController.text.isNotEmpty;
 
@@ -31,25 +33,45 @@ class _LogInState extends State<LogIn> {
     }
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted){
-        currentLanguageIndex = AppLocalizations.supportedLocales.indexWhere((element) => element.languageCode == AppLocalizations.of(context)!.localeName);
+        setState(() {
+          currentLanguageIndex = AppLocalizations.supportedLocales.indexWhere((element) => element.languageCode == AppLocalizations.of(context)!.localeName);
+        });
       }
     },);
+    asyncInit();
     super.initState();
   }
 
-  Future<void> logIn() async {
-    try{
-      await Authentication().logIn(emailController.text, passwordController.text);
-      Logger.green.log('Giriş Tamam');
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
-    } on FirebaseAuthException catch(e) {
-      Logger.red.log('Giriş Başarısız ${e.message}');
+  Future<void> asyncInit() async {
+    prefs = await SharedPreferences.getInstance();
+    if(prefs.containsKey('token')){
+      logInWithToken();
     }
+  }
+
+  Future<void> logIn() async {
+    await Authentication().logIn(emailController.text, passwordController.text, (tokenResponse) {
+      if(tokenResponse != null && tokenResponse.isNotEmpty){
+        Logger.green.log('Giriş Tamam');
+        prefs.setString('token', tokenResponse);
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
+      }else{
+        Logger.red.log('Token Boş Geldi');
+      }
+    },);
+  }
+
+  Future<void> logInWithToken() async {
+    await Authentication().logInWithToken(prefs.getString('token'), () {
+      Logger.green.log('Token İle Giriş Tamam');
+      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
+    },);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: colorBackground,
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(AppLocalizations.of(context)!.logIn),

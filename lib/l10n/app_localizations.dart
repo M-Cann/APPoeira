@@ -63,7 +63,7 @@ import 'app_localizations_tr.dart';
 /// property.
 abstract class AppLocalizations {
   AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -86,16 +86,16 @@ abstract class AppLocalizations {
   /// of delegates is preferred or required.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('tr'),
+    Locale('tr')
   ];
 
   /// No description provided for @logIn.
@@ -146,6 +146,12 @@ abstract class AppLocalizations {
   /// **'Antrenmanlar'**
   String get workouts;
 
+  /// No description provided for @workout.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman'**
+  String get workout;
+
   /// No description provided for @calendar.
   ///
   /// In tr, this message translates to:
@@ -169,6 +175,138 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Çıkış Yap'**
   String get signOut;
+
+  /// No description provided for @settings.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ayarlar'**
+  String get settings;
+
+  /// No description provided for @workoutSettings.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman Ayarları'**
+  String get workoutSettings;
+
+  /// No description provided for @countdownTime.
+  ///
+  /// In tr, this message translates to:
+  /// **'Geri Sayım Süresi'**
+  String get countdownTime;
+
+  /// No description provided for @setsTheTimeYouAreGivenToPrepareWhenStartingAWorkout.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenmana başlarken hazırlanmanız için verilen süreyi ayarlar.'**
+  String get setsTheTimeYouAreGivenToPrepareWhenStartingAWorkout;
+
+  /// No description provided for @themeSettings.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tema Ayarları'**
+  String get themeSettings;
+
+  /// No description provided for @startWorkout.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenmana Başla'**
+  String get startWorkout;
+
+  /// No description provided for @addWorkout.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman Ekle'**
+  String get addWorkout;
+
+  /// No description provided for @addWorkoutProgram.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman Programı Ekle'**
+  String get addWorkoutProgram;
+
+  /// No description provided for @workoutProgram.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman Programı'**
+  String get workoutProgram;
+
+  /// No description provided for @youVeNeverTrainedBeforeClickAboveToStartTrainingNow.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hiç antrenman yapmamışsın.\nHemen yukarıya tıklayarak antrenmana başla.'**
+  String get youVeNeverTrainedBeforeClickAboveToStartTrainingNow;
+
+  /// No description provided for @start.
+  ///
+  /// In tr, this message translates to:
+  /// **'Başlat'**
+  String get start;
+
+  /// No description provided for @noMovementInformationFound.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hareket bilgisi bulunamadı.'**
+  String get noMovementInformationFound;
+
+  /// No description provided for @run.
+  ///
+  /// In tr, this message translates to:
+  /// **'Koşu'**
+  String get run;
+
+  /// No description provided for @walk.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yürüyüş'**
+  String get walk;
+
+  /// No description provided for @calisthenics.
+  ///
+  /// In tr, this message translates to:
+  /// **'Calisthenics'**
+  String get calisthenics;
+
+  /// No description provided for @cardio.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kardiyo'**
+  String get cardio;
+
+  /// No description provided for @swim.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yüzme'**
+  String get swim;
+
+  /// No description provided for @stretch.
+  ///
+  /// In tr, this message translates to:
+  /// **'Esneme'**
+  String get stretch;
+
+  /// No description provided for @yoga.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yoga'**
+  String get yoga;
+
+  /// No description provided for @capoeira.
+  ///
+  /// In tr, this message translates to:
+  /// **'Capoeira'**
+  String get capoeira;
+
+  /// No description provided for @other.
+  ///
+  /// In tr, this message translates to:
+  /// **'Diğer'**
+  String get other;
+
+  /// No description provided for @setsOfReps.
+  ///
+  /// In tr, this message translates to:
+  /// **'{set} set {rep} tekrar'**
+  String setsOfReps(int set, int rep);
 }
 
 class _AppLocalizationsDelegate
@@ -198,9 +336,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

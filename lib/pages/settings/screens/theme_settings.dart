@@ -1,15 +1,16 @@
 import 'package:appoeira/l10n/app_localizations.dart';
 import 'package:appoeira/theme/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({super.key});
+class ThemeSettings extends StatefulWidget {
+  const ThemeSettings({super.key});
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<ThemeSettings> createState() => _ThemeSettingsState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ThemeSettingsState extends State<ThemeSettings> {
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +18,12 @@ class _ProfileState extends State<Profile> {
       backgroundColor: colorBackground,
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(AppLocalizations.of(context)!.profile),
+        title: Text(AppLocalizations.of(context)!.themeSettings),
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
+      body: Column(
+        children: <Widget>[
 
-          ],
-        ),
+        ],
       ),
     );
   }
