@@ -28,7 +28,7 @@ class _WorkoutsListState extends State<WorkoutsList> {
         floatingActionsList.add(WorkoutFloatingAction(AppLocalizations.of(context)!.addWorkoutProgram, Icon(Icons.add_chart), WorkoutProgram()));
         
         //BURASI silinecek
-        workoutsList.add(Workout(DateFormat('dd/MM/yyyy HH:mm').format(DateTime(2025, 08, 16)), WorkoutType.calisthenics, 90, [Moves('Şınav', 5, 12, null), Moves('Ring Pull', 5, 8, 8.5), Moves('Dips', 5, 6, null), Moves('Mekik', 5, 12, null), Moves('Squat', 5, 12, 5)]));
+        workoutsList.add(Workout(DateFormat('dd/MM/yyyy HH:mm').format(DateTime(2025, 08, 16)), 4, 90, [Set(5, [Move('Şınav', 12, null)], 3), Set(5, [Move('Ring Pull', 8, null)], 3), Set(5, [Move('Dips', 6, null)], 3), Set(5, [Move('Mekik', 12, null)], 3), Set(5, [Move('Squat', 12, null)], 3)]));
         //
       });
     },);
@@ -75,7 +75,7 @@ class _WorkoutsListState extends State<WorkoutsList> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(workoutTypeToString(context, workoutsList[index].type)),
+                              Text(workoutTypeIdToString(context, workoutsList[index].workoutTypeId)),
                               Text(workoutsList[index].date),
                             ],
                           ),
@@ -87,7 +87,7 @@ class _WorkoutsListState extends State<WorkoutsList> {
                         ],
                       ),
                       children: [
-                        workoutsList[index].movesList != null && workoutsList[index].movesList!.isEmpty
+                        workoutsList[index].setList != null && workoutsList[index].setList!.isEmpty
                           ? Text(AppLocalizations.of(context)!.noMovementInformationFound)
                           : ListView.separated(
                             shrinkWrap: true,
@@ -96,9 +96,9 @@ class _WorkoutsListState extends State<WorkoutsList> {
                               return Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Expanded(child: Text(workoutsList[index].movesList![index2].name)),
+                                  Expanded(child: Text(workoutsList[index].setList![index2].movesList!.first.name)),
                                   SizedBox(width: 8.w,),
-                                  Text(AppLocalizations.of(context)!.setsOfReps(workoutsList[index].movesList![index2].numberOfSets, workoutsList[index].movesList![index2].numberOfRepetitions)),
+                                  Text(AppLocalizations.of(context)!.setsOfReps(workoutsList[index].setList![index2].numberOfSets, workoutsList[index].setList![index2].movesList!.first.numberOfRepetitions)),
                                 ],
                               );
                             },
@@ -109,7 +109,7 @@ class _WorkoutsListState extends State<WorkoutsList> {
                                 color: Colors.grey,
                               );
                             },
-                            itemCount: workoutsList[index].movesList!.length
+                            itemCount: workoutsList[index].setList!.length
                           )
                       ],
                     );
@@ -154,54 +154,63 @@ class WorkoutFloatingAction{
 }
 
 class Workout{
-  Workout(this.date, this.type, this.duration, this.movesList);
+  Workout(this.date, this.workoutTypeId, this.duration, this.setList);
 
   String date;
-  WorkoutType type;
+  int workoutTypeId;
   int? duration;
-  List<Moves>? movesList;
+  List<Set>? setList;
 }
 
-enum WorkoutType {
-  run,
-  walk,
-  calisthenics,
-  cardio,
-  swim,
-  stretch,
-  yoga,
-  capoeira,
-  other
+class WorkoutType{
+  WorkoutType(this.typeId, this.name);
+
+  int typeId;
+  String name;
 }
 
-class Moves{
-  Moves(this.name, this.numberOfSets, this.numberOfRepetitions, this.weight);
+class Set{
+  Set(this.numberOfSets, this.movesList, this.restDuration);
+
+  int numberOfSets;
+  List<Move>? movesList;
+  int restDuration;
+}
+
+class Move{
+  Move(this.name, this.numberOfRepetitions, this.weight);
 
   String name;
-  int numberOfSets;
   int numberOfRepetitions;
   double? weight;
 }
 
-String workoutTypeToString(BuildContext context, WorkoutType type){
-  switch(type){
-    case WorkoutType.run:
-      return AppLocalizations.of(context)!.run;
-    case WorkoutType.walk:
-      return AppLocalizations.of(context)!.walk;
-    case WorkoutType.calisthenics:
-      return AppLocalizations.of(context)!.calisthenics;
-    case WorkoutType.cardio:
-      return AppLocalizations.of(context)!.cardio;
-    case WorkoutType.swim:
-      return AppLocalizations.of(context)!.swim;
-    case WorkoutType.stretch:
-      return AppLocalizations.of(context)!.stretch;
-    case WorkoutType.yoga:
-      return AppLocalizations.of(context)!.yoga;
-    case WorkoutType.capoeira:
-      return AppLocalizations.of(context)!.capoeira;
-    case WorkoutType.other:
-      return AppLocalizations.of(context)!.other;
-  }
+class WeightType{
+  WeightType(this.typeId, this.name);
+
+  int typeId;
+  String name;
 }
+
+//Public Parameters
+List<WorkoutType> publicWorkoutTypesList = [
+  WorkoutType(1, 'Diğer'),
+  WorkoutType(2, 'Koşu'),
+  WorkoutType(3, 'Yürüyüş'),
+  WorkoutType(4, 'Calisthenics'),
+  WorkoutType(5, 'Kardiuo'),
+  WorkoutType(6, 'Yüzme'),
+  WorkoutType(7, 'Esneme'),
+  WorkoutType(8, 'Yoga'),
+  WorkoutType(9, 'Capoeira'),
+];
+
+List<WeightType> publicWeightTypesList = [
+  WeightType(1, 'Diğer'),
+  WeightType(2, 'Dambıl'),
+  WeightType(3, 'Halter'),
+  WeightType(4, 'Ağırlık Yeleği'),
+  WeightType(5, 'El Bilek Ağırlığı'),
+  WeightType(6, 'Ayak Bilek Ağırlığı'),
+  WeightType(7, 'El ve Ayak Bilek Ağırlığı'),
+];

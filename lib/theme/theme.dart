@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 ///COLORS///
 //Scaffold Colors
 Color colorBackground = Colors.white;
+Color colorRedBackground = Colors.red;
 
 //Text Colors
 Color colorTextMain = Colors.black;

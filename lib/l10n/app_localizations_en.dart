@@ -21,6 +21,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get password => 'Password';
 
   @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get clear => 'Clear';
+
+  @override
+  String get add => 'Add';
+
+  @override
   String get dontHaveAnAccount => 'Don\'t have an account?';
 
   @override
@@ -30,10 +39,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get homePage => 'Home Page';
 
   @override
+  String get search => 'Search';
+
+  @override
   String get workouts => 'Workouts';
 
   @override
   String get workout => 'Workout';
+
+  @override
+  String get workoutDescription => 'Workout Description';
 
   @override
   String get calendar => 'Calendar';
@@ -70,6 +85,33 @@ class AppLocalizationsEn extends AppLocalizations {
   String get addWorkout => 'Add Workout';
 
   @override
+  String get addWorkoutSecond => 'Add Workout';
+
+  @override
+  String get addMovement => 'Add Movement';
+
+  @override
+  String get addSet => 'Add Set';
+
+  @override
+  String get addRest => 'Add Rest';
+
+  @override
+  String get workoutContent => 'Workout Content';
+
+  @override
+  String get workoutType => 'Workout Type';
+
+  @override
+  String get repetitive => 'Repetitive';
+
+  @override
+  String get periodical => 'Periodical';
+
+  @override
+  String get duration => 'Duration';
+
+  @override
   String get addWorkoutProgram => 'Add Workout Program';
 
   @override
@@ -83,7 +125,37 @@ class AppLocalizationsEn extends AppLocalizations {
   String get start => 'Start';
 
   @override
+  String get select => 'Select';
+
+  @override
+  String get enterText => 'Enter text';
+
+  @override
+  String get enterNumber => 'Enter number';
+
+  @override
+  String get optional => '(Optional)';
+
+  @override
   String get noMovementInformationFound => 'No movement information found.';
+
+  @override
+  String get enterTheMovementName => 'Enter the movement name';
+
+  @override
+  String get numberOfSets => 'Number Of Sets';
+
+  @override
+  String get numberOfRepetitions => 'Number Of Repetitions';
+
+  @override
+  String get weight => 'Weight';
+
+  @override
+  String get weightType => 'Weight Type';
+
+  @override
+  String get weighted => 'Weighted';
 
   @override
   String get run => 'Run';
@@ -111,6 +183,29 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get other => 'Other';
+
+  @override
+  String get dumbbell => 'Dumbbell';
+
+  @override
+  String get barbell => 'Barbell';
+
+  @override
+  String get weightVest => 'Weight Vest';
+
+  @override
+  String get wristWeights => 'Wrist Weights';
+
+  @override
+  String get ankleWeights => 'Ankle Weights';
+
+  @override
+  String get wristAndAnkleWeights => 'Wrist and Ankle Weights';
+
+  @override
+  String repsWithCount(Object rep) {
+    return '$rep reps';
+  }
 
   @override
   String setsOfReps(int set, int rep) {

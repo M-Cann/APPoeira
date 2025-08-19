@@ -21,6 +21,15 @@ class AppLocalizationsTr extends AppLocalizations {
   String get password => 'Şifre';
 
   @override
+  String get cancel => 'İptal';
+
+  @override
+  String get clear => 'Temizle';
+
+  @override
+  String get add => 'Ekle';
+
+  @override
   String get dontHaveAnAccount => 'Hesabın yok mu?';
 
   @override
@@ -30,10 +39,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homePage => 'Ana Sayfa';
 
   @override
+  String get search => 'Ara';
+
+  @override
   String get workouts => 'Antrenmanlar';
 
   @override
   String get workout => 'Antrenman';
+
+  @override
+  String get workoutDescription => 'Antrenman Açıklaması';
 
   @override
   String get calendar => 'Takvim';
@@ -70,6 +85,33 @@ class AppLocalizationsTr extends AppLocalizations {
   String get addWorkout => 'Antrenman Ekle';
 
   @override
+  String get addWorkoutSecond => 'Antrenmanı Ekle';
+
+  @override
+  String get addMovement => 'Hareket Ekle';
+
+  @override
+  String get addSet => 'Set Ekle';
+
+  @override
+  String get addRest => 'Dinlenme Ekle';
+
+  @override
+  String get workoutContent => 'Antrenman İçeriği';
+
+  @override
+  String get workoutType => 'Antrenman Tipi';
+
+  @override
+  String get repetitive => 'Tekrarlı';
+
+  @override
+  String get periodical => 'Süreli';
+
+  @override
+  String get duration => 'Süre';
+
+  @override
   String get addWorkoutProgram => 'Antrenman Programı Ekle';
 
   @override
@@ -83,7 +125,37 @@ class AppLocalizationsTr extends AppLocalizations {
   String get start => 'Başlat';
 
   @override
+  String get select => 'Seçiniz';
+
+  @override
+  String get enterText => 'Metin giriniz';
+
+  @override
+  String get enterNumber => 'Sayı giriniz';
+
+  @override
+  String get optional => '(Opsiyonel)';
+
+  @override
   String get noMovementInformationFound => 'Hareket bilgisi bulunamadı.';
+
+  @override
+  String get enterTheMovementName => 'Hareket adını giriniz';
+
+  @override
+  String get numberOfSets => 'Set Sayısı';
+
+  @override
+  String get numberOfRepetitions => 'Tekrar Sayısı';
+
+  @override
+  String get weight => 'Ağırlık';
+
+  @override
+  String get weightType => 'Ağırlık Türü';
+
+  @override
+  String get weighted => 'Ağırlıklı';
 
   @override
   String get run => 'Koşu';
@@ -111,6 +183,29 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get other => 'Diğer';
+
+  @override
+  String get dumbbell => 'Dambıl';
+
+  @override
+  String get barbell => 'Halter';
+
+  @override
+  String get weightVest => 'Ağırlık Yeleği';
+
+  @override
+  String get wristWeights => 'El Bilek Ağırlığı';
+
+  @override
+  String get ankleWeights => 'Ayak Bilek Ağırlığı';
+
+  @override
+  String get wristAndAnkleWeights => 'El ve Ayak Bilek Ağırlığı';
+
+  @override
+  String repsWithCount(Object rep) {
+    return '$rep tekrar';
+  }
 
   @override
   String setsOfReps(int set, int rep) {

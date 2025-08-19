@@ -122,6 +122,24 @@ abstract class AppLocalizations {
   /// **'Şifre'**
   String get password;
 
+  /// No description provided for @cancel.
+  ///
+  /// In tr, this message translates to:
+  /// **'İptal'**
+  String get cancel;
+
+  /// No description provided for @clear.
+  ///
+  /// In tr, this message translates to:
+  /// **'Temizle'**
+  String get clear;
+
+  /// No description provided for @add.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ekle'**
+  String get add;
+
   /// No description provided for @dontHaveAnAccount.
   ///
   /// In tr, this message translates to:
@@ -140,6 +158,12 @@ abstract class AppLocalizations {
   /// **'Ana Sayfa'**
   String get homePage;
 
+  /// No description provided for @search.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ara'**
+  String get search;
+
   /// No description provided for @workouts.
   ///
   /// In tr, this message translates to:
@@ -151,6 +175,12 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Antrenman'**
   String get workout;
+
+  /// No description provided for @workoutDescription.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman Açıklaması'**
+  String get workoutDescription;
 
   /// No description provided for @calendar.
   ///
@@ -218,6 +248,60 @@ abstract class AppLocalizations {
   /// **'Antrenman Ekle'**
   String get addWorkout;
 
+  /// No description provided for @addWorkoutSecond.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenmanı Ekle'**
+  String get addWorkoutSecond;
+
+  /// No description provided for @addMovement.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hareket Ekle'**
+  String get addMovement;
+
+  /// No description provided for @addSet.
+  ///
+  /// In tr, this message translates to:
+  /// **'Set Ekle'**
+  String get addSet;
+
+  /// No description provided for @addRest.
+  ///
+  /// In tr, this message translates to:
+  /// **'Dinlenme Ekle'**
+  String get addRest;
+
+  /// No description provided for @workoutContent.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman İçeriği'**
+  String get workoutContent;
+
+  /// No description provided for @workoutType.
+  ///
+  /// In tr, this message translates to:
+  /// **'Antrenman Tipi'**
+  String get workoutType;
+
+  /// No description provided for @repetitive.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tekrarlı'**
+  String get repetitive;
+
+  /// No description provided for @periodical.
+  ///
+  /// In tr, this message translates to:
+  /// **'Süreli'**
+  String get periodical;
+
+  /// No description provided for @duration.
+  ///
+  /// In tr, this message translates to:
+  /// **'Süre'**
+  String get duration;
+
   /// No description provided for @addWorkoutProgram.
   ///
   /// In tr, this message translates to:
@@ -242,11 +326,71 @@ abstract class AppLocalizations {
   /// **'Başlat'**
   String get start;
 
+  /// No description provided for @select.
+  ///
+  /// In tr, this message translates to:
+  /// **'Seçiniz'**
+  String get select;
+
+  /// No description provided for @enterText.
+  ///
+  /// In tr, this message translates to:
+  /// **'Metin giriniz'**
+  String get enterText;
+
+  /// No description provided for @enterNumber.
+  ///
+  /// In tr, this message translates to:
+  /// **'Sayı giriniz'**
+  String get enterNumber;
+
+  /// No description provided for @optional.
+  ///
+  /// In tr, this message translates to:
+  /// **'(Opsiyonel)'**
+  String get optional;
+
   /// No description provided for @noMovementInformationFound.
   ///
   /// In tr, this message translates to:
   /// **'Hareket bilgisi bulunamadı.'**
   String get noMovementInformationFound;
+
+  /// No description provided for @enterTheMovementName.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hareket adını giriniz'**
+  String get enterTheMovementName;
+
+  /// No description provided for @numberOfSets.
+  ///
+  /// In tr, this message translates to:
+  /// **'Set Sayısı'**
+  String get numberOfSets;
+
+  /// No description provided for @numberOfRepetitions.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tekrar Sayısı'**
+  String get numberOfRepetitions;
+
+  /// No description provided for @weight.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ağırlık'**
+  String get weight;
+
+  /// No description provided for @weightType.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ağırlık Türü'**
+  String get weightType;
+
+  /// No description provided for @weighted.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ağırlıklı'**
+  String get weighted;
 
   /// No description provided for @run.
   ///
@@ -301,6 +445,48 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Diğer'**
   String get other;
+
+  /// No description provided for @dumbbell.
+  ///
+  /// In tr, this message translates to:
+  /// **'Dambıl'**
+  String get dumbbell;
+
+  /// No description provided for @barbell.
+  ///
+  /// In tr, this message translates to:
+  /// **'Halter'**
+  String get barbell;
+
+  /// No description provided for @weightVest.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ağırlık Yeleği'**
+  String get weightVest;
+
+  /// No description provided for @wristWeights.
+  ///
+  /// In tr, this message translates to:
+  /// **'El Bilek Ağırlığı'**
+  String get wristWeights;
+
+  /// No description provided for @ankleWeights.
+  ///
+  /// In tr, this message translates to:
+  /// **'Ayak Bilek Ağırlığı'**
+  String get ankleWeights;
+
+  /// No description provided for @wristAndAnkleWeights.
+  ///
+  /// In tr, this message translates to:
+  /// **'El ve Ayak Bilek Ağırlığı'**
+  String get wristAndAnkleWeights;
+
+  /// No description provided for @repsWithCount.
+  ///
+  /// In tr, this message translates to:
+  /// **'{rep} tekrar'**
+  String repsWithCount(Object rep);
 
   /// No description provided for @setsOfReps.
   ///

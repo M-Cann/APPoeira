@@ -20,6 +20,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  TextEditingController searchController = TextEditingController();
   List<DrawerMenu> drawerList = [];
 
   @override
@@ -55,9 +56,23 @@ class _HomePageState extends State<HomePage> {
         title: Text(AppLocalizations.of(context)!.homePage),
       ),
       body: Center(
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
           children: <Widget>[
-
+            TextField(
+              controller: searchController,
+              decoration: InputDecoration(
+                hintText: AppLocalizations.of(context)!.search,
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8.r)),
+                  borderSide: BorderSide(width: 1.w, color: Colors.blueGrey),
+                ),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(8.r)),
+                  borderSide: BorderSide(width: 1.w, color: Colors.grey),
+                ),
+              ),
+            ),
           ],
         ),
       ),
