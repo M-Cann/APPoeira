@@ -6,17 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4b768617-00d4-4e81-b6e7-ef277b21c495" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devtools_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/devtools_options.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/common_functions/common_functions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/common_functions/common_functions.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_en.arb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_en.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_localizations_tr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_localizations_tr.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/app_tr.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/app_tr.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/home_page/screens/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page/screens/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/workouts/screens/add_workout.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/workouts/screens/add_workout.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/workouts/screens/workouts_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/workouts/screens/workouts_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/theme/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/theme/theme.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

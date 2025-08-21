@@ -182,6 +182,12 @@ abstract class AppLocalizations {
   /// **'Antrenman Açıklaması'**
   String get workoutDescription;
 
+  /// No description provided for @targetedWorkoutDuration.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hedeflenen Antrenman Süresi'**
+  String get targetedWorkoutDuration;
+
   /// No description provided for @calendar.
   ///
   /// In tr, this message translates to:
@@ -386,12 +392,6 @@ abstract class AppLocalizations {
   /// **'Ağırlık Türü'**
   String get weightType;
 
-  /// No description provided for @weighted.
-  ///
-  /// In tr, this message translates to:
-  /// **'Ağırlıklı'**
-  String get weighted;
-
   /// No description provided for @run.
   ///
   /// In tr, this message translates to:
@@ -439,6 +439,12 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Capoeira'**
   String get capoeira;
+
+  /// No description provided for @no.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yok'**
+  String get no;
 
   /// No description provided for @other.
   ///

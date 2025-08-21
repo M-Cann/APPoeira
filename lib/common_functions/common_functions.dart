@@ -35,6 +35,8 @@ String workoutTypeIdToString(BuildContext context, int id){
 
 String weightTypeIdToString(BuildContext context, int id){
   switch(id){
+    case 0:
+      return AppLocalizations.of(context)!.no;
     case 1:
       return AppLocalizations.of(context)!.other;
     case 2:

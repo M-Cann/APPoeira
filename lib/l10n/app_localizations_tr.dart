@@ -51,6 +51,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get workoutDescription => 'Antrenman Açıklaması';
 
   @override
+  String get targetedWorkoutDuration => 'Hedeflenen Antrenman Süresi';
+
+  @override
   String get calendar => 'Takvim';
 
   @override
@@ -155,9 +158,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String get weightType => 'Ağırlık Türü';
 
   @override
-  String get weighted => 'Ağırlıklı';
-
-  @override
   String get run => 'Koşu';
 
   @override
@@ -180,6 +180,9 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get capoeira => 'Capoeira';
+
+  @override
+  String get no => 'Yok';
 
   @override
   String get other => 'Diğer';

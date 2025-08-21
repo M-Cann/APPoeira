@@ -28,7 +28,7 @@ class _WorkoutsListState extends State<WorkoutsList> {
         floatingActionsList.add(WorkoutFloatingAction(AppLocalizations.of(context)!.addWorkoutProgram, Icon(Icons.add_chart), WorkoutProgram()));
         
         //BURASI silinecek
-        workoutsList.add(Workout(DateFormat('dd/MM/yyyy HH:mm').format(DateTime(2025, 08, 16)), 4, 90, [Set(5, [Move('Şınav', 12, null)], 3), Set(5, [Move('Ring Pull', 8, null)], 3), Set(5, [Move('Dips', 6, null)], 3), Set(5, [Move('Mekik', 12, null)], 3), Set(5, [Move('Squat', 12, null)], 3)]));
+        workoutsList.add(Workout(DateFormat('dd/MM/yyyy HH:mm').format(DateTime(2025, 08, 16)), 4, 90, [Move('Şınav', 5, 12, null, null), Move('Ring Pull', 5, 8, 4, 8.5), Move('Dips', 5, 6, null, null), Move('Mekik', 5, 12, null, null), Move('Squat', 5, 12, null, null)]));
         //
       });
     },);
@@ -87,19 +87,24 @@ class _WorkoutsListState extends State<WorkoutsList> {
                         ],
                       ),
                       children: [
-                        workoutsList[index].setList != null && workoutsList[index].setList!.isEmpty
+                        workoutsList[index].moveList != null && workoutsList[index].moveList!.isEmpty
                           ? Text(AppLocalizations.of(context)!.noMovementInformationFound)
                           : ListView.separated(
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index2) {
-                              return Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(child: Text(workoutsList[index].setList![index2].movesList!.first.name)),
-                                  SizedBox(width: 8.w,),
-                                  Text(AppLocalizations.of(context)!.setsOfReps(workoutsList[index].setList![index2].numberOfSets, workoutsList[index].setList![index2].movesList!.first.numberOfRepetitions)),
-                                ],
+                              return Padding(
+                                padding: EdgeInsets.symmetric(vertical: 4.h),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Expanded(flex: 2, child: Text(workoutsList[index].moveList![index2].name)),
+                                    SizedBox(width: 8.w,),
+                                    Expanded(flex: 3, child: Text(workoutsList[index].moveList![index2].weightType == null ? '' : '${workoutsList[index].moveList![index2].weight!}kg ${weightTypeIdToString(context, workoutsList[index].moveList![index2].weightType!)}')),
+                                    SizedBox(width: 8.w,),
+                                    Expanded(flex: 2, child: Text(AppLocalizations.of(context)!.setsOfReps(workoutsList[index].moveList![index2].numberOfSets, workoutsList[index].moveList![index2].numberOfRepetitions))),
+                                  ],
+                                ),
                               );
                             },
                             separatorBuilder: (context, index) {
@@ -109,7 +114,7 @@ class _WorkoutsListState extends State<WorkoutsList> {
                                 color: Colors.grey,
                               );
                             },
-                            itemCount: workoutsList[index].setList!.length
+                            itemCount: workoutsList[index].moveList!.length
                           )
                       ],
                     );
@@ -154,12 +159,12 @@ class WorkoutFloatingAction{
 }
 
 class Workout{
-  Workout(this.date, this.workoutTypeId, this.duration, this.setList);
+  Workout(this.date, this.workoutTypeId, this.duration, this.moveList);
 
   String date;
   int workoutTypeId;
   int? duration;
-  List<Set>? setList;
+  List<Move>? moveList;
 }
 
 class WorkoutType{
@@ -169,19 +174,13 @@ class WorkoutType{
   String name;
 }
 
-class Set{
-  Set(this.numberOfSets, this.movesList, this.restDuration);
-
-  int numberOfSets;
-  List<Move>? movesList;
-  int restDuration;
-}
-
 class Move{
-  Move(this.name, this.numberOfRepetitions, this.weight);
+  Move(this.name, this.numberOfSets, this.numberOfRepetitions, this.weightType, this.weight);
 
   String name;
+  int numberOfSets;
   int numberOfRepetitions;
+  int? weightType;
   double? weight;
 }
 
@@ -206,6 +205,7 @@ List<WorkoutType> publicWorkoutTypesList = [
 ];
 
 List<WeightType> publicWeightTypesList = [
+  WeightType(0, 'Yok'),
   WeightType(1, 'Diğer'),
   WeightType(2, 'Dambıl'),
   WeightType(3, 'Halter'),

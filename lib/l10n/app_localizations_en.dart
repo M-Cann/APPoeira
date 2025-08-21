@@ -51,6 +51,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get workoutDescription => 'Workout Description';
 
   @override
+  String get targetedWorkoutDuration => 'Targeted Training Duration';
+
+  @override
   String get calendar => 'Calendar';
 
   @override
@@ -155,9 +158,6 @@ class AppLocalizationsEn extends AppLocalizations {
   String get weightType => 'Weight Type';
 
   @override
-  String get weighted => 'Weighted';
-
-  @override
   String get run => 'Run';
 
   @override
@@ -180,6 +180,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get capoeira => 'Capoeira';
+
+  @override
+  String get no => 'No';
 
   @override
   String get other => 'Other';
